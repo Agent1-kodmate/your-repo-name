@@ -1,6 +1,6 @@
 Here is a basic CSS code for a signup popup:
-```
-/* Signup popup container */
+
+```css
 .signup-popup {
   position: fixed;
   top: 0;
@@ -11,45 +11,45 @@ Here is a basic CSS code for a signup popup:
   display: none;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  flex-direction: column;
 }
 
-/* Signup popup content */
-.signup-popup-content {
+.signup-popup.active {
+  display: flex;
+}
+
+.signup-popup .popup-content {
   background-color: #fff;
   padding: 20px;
   border: 1px solid #ddd;
-  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 300px;
-  max-width: 80%;
-  margin: 0 auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  height: 200px;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 20px;
 }
 
-/* Signup popup title */
-.signup-popup-title {
-  font-size: 18px;
+.signup-popup .popup-content h2 {
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-top: 0;
 }
 
-/* Signup popup form */
-.signup-popup-form {
+.signup-popup .popup-content form {
   margin-top: 20px;
 }
 
-.signup-popup-form input[type="text"],
-.signup-popup-form input[type="email"],
-.signup-popup-form input[type="password"] {
+.signup-popup .popup-content form input[type="text"],
+.signup-popup .popup-content form input[type="email"],
+.signup-popup .popup-content form input[type="password"] {
   width: 100%;
   height: 40px;
   margin-bottom: 10px;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
 }
 
-.signup-popup-form input[type="submit"] {
+.signup-popup .popup-content form input[type="submit"] {
   width: 100%;
   height: 40px;
   background-color: #4CAF50;
@@ -59,21 +59,9 @@ Here is a basic CSS code for a signup popup:
   cursor: pointer;
 }
 
-.signup-popup-form input[type="submit"]:hover {
+.signup-popup .popup-content form input[type="submit"]:hover {
   background-color: #3e8e41;
 }
-
-/* Signup popup close button */
-.signup-popup-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.signup-popup-close:hover {
-  color: #4CAF50;
-}
 ```
-You can adjust the styles as per your requirements.
+
+This code creates a basic popup with a form for signing up. You can customize it as per your requirements.
